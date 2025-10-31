@@ -1,3 +1,3 @@
-Hollo
+Hello
 
 # simple-site
