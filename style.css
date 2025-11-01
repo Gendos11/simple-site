@@ -91,9 +91,18 @@ html, body {
   gap: 1rem;
 }
 .stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
-  text-align: center;
+}
+.stats .stat-item .stat-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
 }
 
 .work {
