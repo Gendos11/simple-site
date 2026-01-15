@@ -1,10 +1,22 @@
+
+
+/*  Змінні */
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-primary: #2a2a2a;
+  --color-accent: #2c4d72;
+  --color-bg: #f5f5f5;
+  --color-white: #ffffff;
+}
+
+/*  Базові стилі */
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
-  color: #2a2a2a;
-  background: #f5f5f5;
+  overflow-x: hidden; /* усуває білу смугу справа */
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  background: var(--color-bg);
   line-height: 1.6;
 }
 
@@ -14,54 +26,64 @@ html, body {
   margin: 0 auto;
 }
 
+/* Header */
 .header {
-  background: #f5f5f5;
+  background: var(--color-bg);
   padding: 1rem 0;
 }
-.header .nav {
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.header .logo {
+
+.logo {
   font-weight: 600;
   font-size: 1.3rem;
 }
-.header .menu {
+
+.menu {
   display: flex;
   list-style: none;
   gap: 2rem;
   margin: 0;
   padding: 0;
 }
-.header .menu a {
+
+.menu a {
   text-decoration: none;
-  color: #2a2a2a;
+  color: var(--color-primary);
   font-weight: 500;
   transition: color 0.3s;
 }
-.header .menu a:hover {
-  color: #2c4d72;
+
+.menu a:hover {
+  color: var(--color-accent);
 }
 
+/*  Hero */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
 }
+
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .hero p {
   max-width: 600px;
   margin: 0 auto 2rem;
   font-size: 1rem;
   color: #555;
 }
-.hero .btn {
-  background: #2c4d72;
-  color: #ffffff;
+
+.btn {
+  background: var(--color-accent);
+  color: var(--color-white);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -69,59 +91,59 @@ html, body {
   font-size: 1rem;
   transition: background 0.3s;
 }
-.hero .btn:hover {
+
+.btn:hover {
   background: #203b58;
 }
 
+/*  About */
 .about {
   text-align: center;
   padding: 3rem 1rem;
 }
 
+/*  Stats */
 .stats {
-  background: #2c4d72;
-  color: #ffffff;
+  background: var(--color-accent);
+  color: var(--color-white);
   padding: 2rem 0;
 }
-.stats .stats-flex {
+
+.stats-flex {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.stats .stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+.stat-item {
   font-size: 1.2rem;
   font-weight: 500;
-}
-.stats .stat-item .stat-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 0.5rem;
-  filter: brightness(0) invert(1);
+  text-align: center;
 }
 
+/*  Work */
 .work {
   text-align: center;
   padding: 3rem 1rem;
 }
-.work .video img {
+
+.video img {
   max-width: 100%;
   border-radius: 8px;
   margin-top: 1.5rem;
 }
 
+/*  Footer */
 .footer {
-  background: #2c4d72;
-  color: #ffffff;
+  background: var(--color-accent);
+  color: var(--color-white);
   text-align: center;
   padding: 1.5rem 0;
 }
 
+/* 📱 Адаптація */
 @media (max-width: 1024px) {
   .menu {
     gap: 1rem;
@@ -130,37 +152,43 @@ html, body {
     font-size: 2.2rem;
   }
 }
+
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     gap: 1rem;
   }
+
   .menu {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
+
   .hero h1 {
     font-size: 2rem;
   }
+
   .stats-flex {
     flex-direction: column;
   }
 }
+
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
   }
+
   .hero p {
     font-size: 0.9rem;
   }
-  .hero .btn {
+
+  .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
+
   .about, .work {
     padding: 2rem 1rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

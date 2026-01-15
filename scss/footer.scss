@@ -1,0 +1,11 @@
+
+@use 'variables' as *;
+
+
+
+.footer {
+  background: $color-accent;
+  color: $color-white;
+  text-align: center;
+  padding: 1.5rem 0;
+}

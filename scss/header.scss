@@ -1,0 +1,41 @@
+
+@use 'variables' as *;
+
+
+
+
+.header {
+  background: $color-bg;
+  padding: 1rem 0;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}
